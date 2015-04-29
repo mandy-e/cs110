@@ -22,10 +22,9 @@ public class Card
    private int suit;          //suit value of card
    private String picture;    //picture of each card
    private String suitName;   //suit name not value
-   
-   /** array list of card images */
-   //private ArrayList<Image> cardFaces;   
-   
+   private String rankName;   //rank name not value
+   private String cardStr;    //the card's values as a string
+    
    /**
       Alternate Constructor
       @param suit The suit the user enters
@@ -56,184 +55,196 @@ public class Card
    }
    
    /**
-      getPicture method returns the rank
+      getPicture method returns the back of card
+      @return the picture of the card back
+   */
+   public String getPicture()
+   {
+      picture = "cardpics/back.jpg";
+      return picture;
+   }
+   /**
+      getPicture method returns the card face picture
       @param suit the suit of the card
       @param rank the rank of the card
       @return The picture of turned over card
    */
-   public String getRank(int suit, int rank)
+   public String getPicture(Card obj)
    {
-     picture = "back.jpg";
+     picture = "cardpics/back.jpg";
      
      //if statements to get the right image
      if (suit == SPADES)
      {
          if (rank == ACE)
-            picture = "01s.jpg";
+            picture = "cardpics/01s.jpg";
          
          if (rank == 2)
-            picture = "02s.jpg";
+            picture = "cardpics/02s.jpg";
             
          if (rank == 3)
-            picture = "03s.jpg";
+            picture = "cardpics/03s.jpg";
             
          if (rank == 4)
-            picture = "04s.jpg";
+            picture = "cardpics/04s.jpg";
             
          if (rank == 5)
-            picture = "05s.jpg";
+            picture = "cardpics/05s.jpg";
             
          if (rank == 6)
-            picture = "06s.jpg";
+            picture = "cardpics/06s.jpg";
 
          if (rank == 7)
-            picture = "07s.jpg";
+            picture = "cardpics/07s.jpg";
             
          if (rank == 8)
-            picture = "08s.jpg";
+            picture = "cardpics/08s.jpg";
             
          if (rank == 9)
-            picture = "09s.jpg";
+            picture = "cardpics/09s.jpg";
             
          if (rank == 10)
-            picture = "10s.jpg";
+            picture = "cardpics/10s.jpg";
             
          if (rank == JACK)
-            picture = "11s.jpg";
+            picture = "cardpics/11s.jpg";
             
          if (rank == QUEEN)
-            picture = "12s.jpg";
+            picture = "cardpics/12s.jpg";
             
          if (rank == KING)
-            picture = "13s.jpg";
+            picture = "cardpics/13s.jpg";
      }
+     
      //if statements to get the right image
      if (suit == CLUBS)
      {
          if (rank == ACE)
-            picture = "01s.jpg";
+            picture = "cardpics/01c.jpg";
          
          if (rank == 2)
-            picture = "02s.jpg";
+            picture = "cardpics/02c.jpg";
             
          if (rank == 3)
-            picture = "03s.jpg";
+            picture = "cardpics/03c.jpg";
             
          if (rank == 4)
-            picture = "04s.jpg";
+            picture = "cardpics/04c.jpg";
             
          if (rank == 5)
-            picture = "05s.jpg";
+            picture = "cardpics/05c.jpg";
             
          if (rank == 6)
-            picture = "06s.jpg";
+            picture = "cardpics/06c.jpg";
 
          if (rank == 7)
-            picture = "07s.jpg";
+            picture = "cardpics/07c.jpg";
             
          if (rank == 8)
-            picture = "08s.jpg";
+            picture = "cardpics/08c.jpg";
             
          if (rank == 9)
-            picture = "09s.jpg";
+            picture = "cardpics/09c.jpg";
             
          if (rank == 10)
-            picture = "10s.jpg";
+            picture = "cardpics/10c.jpg";
             
          if (rank == JACK)
-            picture = "11s.jpg";
+            picture = "cardpics/11c.jpg";
             
          if (rank == QUEEN)
-            picture = "12s.jpg";
+            picture = "cardpics/12c.jpg";
             
          if (rank == KING)
-            picture = "13s.jpg";
+            picture = "cardpics/13c.jpg";
      }
+     
      //if statements to get the right image
      if (suit == DIAMONDS)
      {
          if (rank == ACE)
-            picture = "01s.jpg";
+            picture = "cardpics/01d.jpg";
          
          if (rank == 2)
-            picture = "02s.jpg";
+            picture = "cardpics/02d.jpg";
             
          if (rank == 3)
-            picture = "03s.jpg";
+            picture = "cardpics/03d.jpg";
             
          if (rank == 4)
-            picture = "04s.jpg";
+            picture = "cardpics/04d.jpg";
             
          if (rank == 5)
-            picture = "05s.jpg";
+            picture = "cardpics/05d.jpg";
             
          if (rank == 6)
-            picture = "06s.jpg";
+            picture = "cardpics/06d.jpg";
 
          if (rank == 7)
-            picture = "07s.jpg";
+            picture = "cardpics/07d.jpg";
             
          if (rank == 8)
-            picture = "08s.jpg";
+            picture = "cardpics/08d.jpg";
             
          if (rank == 9)
-            picture = "09s.jpg";
+            picture = "cardpics/09d.jpg";
             
          if (rank == 10)
-            picture = "10s.jpg";
+            picture = "cardpics/10d.jpg";
             
          if (rank == JACK)
-            picture = "11s.jpg";
+            picture = "cardpics/11d.jpg";
             
          if (rank == QUEEN)
-            picture = "12s.jpg";
+            picture = "cardpics/12d.jpg";
             
          if (rank == KING)
-            picture = "13s.jpg";
+            picture = "cardpics/13d.jpg";
      }
+     
      //if statements to get the right image
      if (suit == HEARTS)
      {
          if (rank == ACE)
-            picture = "01s.jpg";
+            picture = "cardpics/01h.jpg";
          
          if (rank == 2)
-            picture = "02s.jpg";
+            picture = "cardpics/02h.jpg";
             
          if (rank == 3)
-            picture = "03s.jpg";
+            picture = "cardpics/03h.jpg";
             
          if (rank == 4)
-            picture = "04s.jpg";
+            picture = "cardpics/04h.jpg";
             
          if (rank == 5)
-            picture = "05s.jpg";
+            picture = "cardpics/05h.jpg";
             
          if (rank == 6)
-            picture = "06s.jpg";
+            picture = "cardpics/06h.jpg";
 
          if (rank == 7)
-            picture = "07s.jpg";
+            picture = "cardpics/07h.jpg";
             
          if (rank == 8)
-            picture = "08s.jpg";
+            picture = "cardpics/08h.jpg";
             
          if (rank == 9)
-            picture = "09s.jpg";
+            picture = "cardpics/09h.jpg";
             
          if (rank == 10)
-            picture = "10s.jpg";
+            picture = "cardpics/10h.jpg";
             
          if (rank == JACK)
-            picture = "11s.jpg";
+            picture = "cardpics/11h.jpg";
             
          if (rank == QUEEN)
-            picture = "12s.jpg";
+            picture = "cardpics/12h.jpg";
             
          if (rank == KING)
-            picture = "13s.jpg";
+            picture = "cardpics/13h.jpg";
      }
-     
+     //return face up card image
      return picture;
    }
          
@@ -245,7 +256,17 @@ public class Card
    {
       //Create a string describing the card
       suitNameConverter();
-      String cardStr = "This card is the " + rank + " of " + suitName;
+      rankNameConverter();
+      
+      //if statement for if we need a rankName instead of rank
+      if (rank == 1 | rank == 11 | rank == 12 | rank == 13)
+      {
+         cardStr = "The " + rankName + " of " + suitName;
+      }
+      else
+      {
+         cardStr = "The " + rank + " of " + suitName;
+      }
       return cardStr;
    }
    
@@ -274,7 +295,32 @@ public class Card
       }
       return suitName;
    }
-   
+   /**
+      rankNameConverter takes the rank value, converts it to a String, returns String
+      @return the rank's name
+   */
+   public String rankNameConverter()
+   {  
+      //if statements for which category it belongs to based on its value
+      if (rank == 1)
+      {
+         rankName = "Ace";
+      }
+      else if (rank == 11)
+      {
+         rankName = "Jack";
+      }
+      else if (rank == 12)
+      {
+         rankName = "Queen";
+      }
+      else if (rank == 13)
+      {
+         rankName = "King";
+      }
+      return rankName;
+   }
+      
     /** equals method if card 1 = card 2 based on the card's rank only
       @return status tells whether boolean true or false
       */
@@ -293,5 +339,23 @@ public class Card
          
          return status;
       }
-                            
+      
+    /** isGreater method if card 1 > card 2 based on the card's rank only
+      @return status tells whether boolean true or false
+      */
+      public boolean isGreater (Card object2)
+      {
+         boolean status;
+         
+         if (rank > object2.rank)
+         {
+            status = true;
+         }
+         else 
+         {
+            status = false;
+         }
+         
+         return status;
+      }                                
 }
